@@ -5,7 +5,7 @@
 
 <script>
 import Wave from './components/Wave.vue';
-import Login from './components/Login.vue';
+import Login from './components/Signup.vue';
 
 export default {
   name: 'App',
