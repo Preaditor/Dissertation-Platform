@@ -5,7 +5,7 @@
 
 <script>
 import Wave from './components/Wave.vue';
-import Signup from './components/Signup.vue';
+import Signup from './components/Sidebar.vue';
 
 export default {
   name: 'App',
