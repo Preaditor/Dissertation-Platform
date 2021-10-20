@@ -1,6 +1,6 @@
 <template>
     <div id="login_form">
-        <form class="form" id="form_pt1" @submit.prevent="signup">
+        <form class="form" id="form_pt1" @submit.prevent="Signup">
         <h1 id="title-main">Ready to continue?</h1>
         <input
           id="input-u"

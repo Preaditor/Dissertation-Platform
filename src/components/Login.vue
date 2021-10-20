@@ -27,8 +27,7 @@
           color: rgb(0, 0, 0);
           margin-top: 5px;
           padding-bottom: 0;
-          width: 500px;
-        "
+          width: 500px;"
       >
         Don't have an account?
         <button name="signup" id="Signup" type="button" v-on:click="Signup">Sign Up! </button>
