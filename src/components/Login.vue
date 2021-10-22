@@ -30,7 +30,7 @@
           width: 500px;"
       >
         Don't have an account?
-        <button name="signup" id="Signup" type="button" v-on:click="Signup">Sign Up! </button>
+        <button name="signup" id="Signup" type="button" @click="Signup">Sign Up! </button>
       </p>
       <p style="color: red; padding-bottom: 0; width: 500px"></p>
 

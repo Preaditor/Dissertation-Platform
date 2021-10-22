@@ -46,7 +46,7 @@
           "
         >
           Already have an account?
-        <button name="login" id="input-submit" type="button" v-on:click="Login()"> Login </button>
+        <button name="login" id="input-submit" type="button" @click="Login()"> Login </button>
         </p>
         <p style="color: red; padding-bottom: 0; width: 500px"></p>
 

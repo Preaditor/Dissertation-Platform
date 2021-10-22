@@ -1,31 +1,31 @@
 <template>
     <div id="sidebar">
-        <div class="side_button" id="profile" v-on:click="profile">
+        <div class="side_button" id="profile" @click="profile">
             <img class="icon" src="@/res/fontawesome/svgs/solid/user.svg">
             <p id="naming">Profile</p>
         </div>
-        <div class="side_button" id="recmod" v-on:click="recent">
+        <div class="side_button" id="recmod" @click="recent">
             <img class="icon" src="@/res/fontawesome/svgs/solid/folder-open.svg">
             <p id="naming">Recent</p>
         </div>
-        <div class="side_button" id="allmod" v-on:click="allmods">
+        <div class="side_button" id="allmod" @click="allmods">
             <img class="icon" src="@/res/fontawesome/svgs/solid/folder-tree.svg">
             <p id="naming">All Modules</p>
         </div>
-        <div class="side_button" id="progress" v-on:click="progress">
+        <div class="side_button" id="progress" @click="progress">
             <img class="icon" src="@/res/fontawesome/svgs/solid/chart-line.svg">
             <p id="naming">Progress</p>
         </div>
-        <div class="side_button" id="settings" v-on:click="settings">
+        <div class="side_button" id="settings" @click="settings">
             <img class="icon" src="@/res/fontawesome/svgs/solid/gears.svg">
             <p id="naming">Settings</p>
         </div>
-        <div class="side_button" id="logout" v-on:click="logout">
+        <div class="side_button" id="logout" @click="logout">
             <img class="icon" src="@/res/fontawesome/svgs/solid/sign-out-alt-solid.svg">
             <p id="naming">Sign Out</p>
         </div>
     </div>
-    <button id="expand" v-on:click="expand">
+    <button id="expand" @click="expand">
         <img class="expand_button" src="@/res/fontawesome/svgs/solid/align-left.svg">
 
     </button>
