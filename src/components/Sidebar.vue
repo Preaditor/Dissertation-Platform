@@ -1,5 +1,5 @@
 <template>
-    <div id="sidebar">
+    <div id="sidebar" :class="{ 'sidebar-expand': openstate }">
         <div class="side_button" id="profile" v-on:click="profile">
             <img class="icon" src="@/res/fontawesome/svgs/solid/user.svg">
             <p id="naming">Profile</p>
@@ -24,11 +24,10 @@
             <img class="icon" src="@/res/fontawesome/svgs/solid/sign-out-alt-solid.svg">
             <p id="naming">Sign Out</p>
         </div>
+        <button id="expand" v-on:click="openstate=!openstate">
+          <img class="expand_button" src="@/res/fontawesome/svgs/solid/align-left.svg">
+      </button>
     </div>
-    <button id="expand" v-on:click="expand">
-        <img class="expand_button" src="@/res/fontawesome/svgs/solid/align-left.svg">
-
-    </button>
 </template>
 
 <script>
@@ -39,22 +38,6 @@ export default {
     };
   },
   methods: {
-    expand() {
-      const side = document.getElementById('sidebar');
-      const sidebutton = document.getElementById('expand');
-      const names = document.getElementById('naming');
-      if (this.openstate === false) {
-        side.style.width = '190px';
-        sidebutton.style.left = '200px';
-        names.style.visibility = 'visible';
-        this.openstate = true;
-      } else {
-        side.style.width = '90px';
-        sidebutton.style.left = '100px';
-        names.style.visibility = 'hidden';
-        this.openstate = false;
-      }
-    },
     logout() {
       console.log('logout');
     },
@@ -91,6 +74,9 @@ export default {
         grid-auto-columns: min-content;
         justify-content: center;
         align-items: center;
+        user-select: none;
+        cursor: pointer;
+
         > .icon {
             width: 60px;
             height: 60px;
@@ -105,6 +91,20 @@ export default {
             color: black;
             visibility: hidden;
         }
+    }
+
+    &.sidebar-expand {
+      width: 190px;
+
+      > .side_button {
+        #naming {
+          visibility: visible;
+        }
+      }
+
+      #expand {
+        left: 200px;
+      }
     }
 }
 #expand {
