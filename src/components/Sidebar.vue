@@ -25,7 +25,7 @@
             <p id="naming">Sign Out</p>
         </div>
     </div>
-    <button id="expand" v-on:click="expand()">
+    <button id="expand" v-on:click="expand">
         <img class="expand_button" src="@/res/fontawesome/svgs/solid/align-left.svg">
 
     </button>
