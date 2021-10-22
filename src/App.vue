@@ -1,17 +1,20 @@
 <template>
   <Wave />
-  <Signup/>
+  <Sidebar/>
+  <Login />
 </template>
 
 <script>
 import Wave from './components/Wave.vue';
-import Signup from './components/Sidebar.vue';
+import Sidebar from './components/Sidebar.vue';
+import Login from './components/Login.vue';
 
 export default {
   name: 'App',
   components: {
     Wave,
-    Signup,
+    Sidebar,
+    Login,
   },
 };
 </script>
