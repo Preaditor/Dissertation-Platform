@@ -74,6 +74,7 @@ export default {
         grid-auto-columns: min-content;
         justify-content: center;
         align-items: center;
+        padding-top: 30px;
         > .icon {
             width: 60px;
             height: 60px;

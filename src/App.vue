@@ -1,20 +1,15 @@
 <template>
   <Wave />
-  <Sidebar/>
-  <Signup />
+  <component id="component" :is="$state.getActiveComponent()"/>
 </template>
 
 <script>
 import Wave from './components/Wave.vue';
-import Sidebar from './components/Sidebar.vue';
-import Signup from './components/Signup.vue';
 
 export default {
   name: 'App',
   components: {
     Wave,
-    Sidebar,
-    Signup,
   },
 };
 </script>
