@@ -43,18 +43,23 @@ export default {
     },
     settings() {
       console.log('settings');
+      this.$state.setActiveComponent('settings');
     },
     profile() {
       console.log('profile');
+      this.$state.setActiveComponent('profile');
     },
     recent() {
       console.log('recent');
+      this.$state.setActiveComponent('module');
     },
     allmods() {
       console.log('all modules');
+      this.$state.setActiveComponent('modules');
     },
     progress() {
       console.log('progress');
+      this.$state.setActiveComponent('progress');
     },
   },
 };

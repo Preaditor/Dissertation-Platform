@@ -65,7 +65,8 @@ export default {
   },
   methods: {
     Login() {
-      console.log('works');
+      this.$state.setActiveComponent('profile');
+      this.$sidestate.setActiveComponent('sidebar');
     },
     Signup() {
       console.log('signup');

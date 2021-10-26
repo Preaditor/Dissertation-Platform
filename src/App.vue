@@ -1,6 +1,7 @@
 <template>
   <Wave />
-  <component id="component" :is="$state.getActiveComponent()"/>
+  <component :is="$state.getActiveComponent()"/>
+  <component :is="$sidestate.getActiveComponent()"/>
 </template>
 
 <script>
