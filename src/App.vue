@@ -1,16 +1,18 @@
 <template>
   <Wave />
   <component :is="$state.getActiveComponent()"/>
-  <component :is="$sidestate.getActiveComponent()"/>
+  <Sidebar v-if="$state.SidebarActive" />
 </template>
 
 <script>
 import Wave from './components/Wave.vue';
+import Sidebar from './components/Sidebar.vue';
 
 export default {
   name: 'App',
   components: {
     Wave,
+    Sidebar,
   },
 };
 </script>
