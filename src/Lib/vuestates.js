@@ -1,4 +1,4 @@
-import { reactive, markRaw, computed } from 'vue';
+import { reactive, markRaw } from 'vue';
 
 import Login from '@/components/Login.vue';
 import Settings from '@/components/Settings.vue';
@@ -17,12 +17,13 @@ export default class VueStates {
       modules: markRaw(Modules),
       module: markRaw(Module),
     };
-    this.SidebarActive = computed(() => ![
-      this.components.login,
-      this.components.signup,
-    ].contains(this.reactive.activeComponent));
     this.reactive = reactive(Object.create(null));
     this.reactive.activeComponent = this.components.login;
+    this.reactive.showSidebar = false;
+  }
+
+  get showSidebar() {
+    return this.reactive.showSidebar;
   }
 
   getActiveComponent() {
@@ -30,6 +31,11 @@ export default class VueStates {
   }
 
   setActiveComponent(name) {
+    const disableSidebarComponents = [
+      this.components.login,
+      this.components.signup,
+    ];
     this.reactive.activeComponent = this.components[name] || this.components.notfound;
+    this.reactive.showSidebar = !disableSidebarComponents.includes(this.reactive.activeComponent);
   }
 }
