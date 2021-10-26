@@ -1,7 +1,7 @@
 <template>
   <Wave />
   <component :is="$state.getActiveComponent()"/>
-  <Sidebar v-if="$state.showSidebar" />
+  <Sidebar v-if="$state.SidebarActive.value" />
 </template>
 
 <script>
@@ -13,9 +13,6 @@ export default {
   components: {
     Wave,
     Sidebar,
-  },
-  mounted() {
-    console.log('test', this.$state.sidebarActive);
   },
 };
 </script>
