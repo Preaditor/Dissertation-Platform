@@ -1,4 +1,4 @@
-import { reactive, markRaw, computed } from 'vue';
+import { reactive, markRaw } from 'vue';
 
 import Login from '@/components/Login.vue';
 import Settings from '@/components/Settings.vue';
@@ -20,15 +20,6 @@ export default class VueStates {
 
     this.reactive = reactive(Object.create(null));
     this.reactive.activeComponent = this.components.login;
-
-    this.SidebarActive = computed(() => ![
-      this.components.login,
-      this.components.signup,
-    ].includes(this.reactive.activeComponent));
-  }
-
-  get showSidebar() {
-    return this.reactive.showSidebar;
   }
 
   getActiveComponent() {

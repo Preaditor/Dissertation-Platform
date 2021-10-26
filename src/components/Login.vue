@@ -41,6 +41,7 @@
 
 <script>
 export default {
+  hideSidebar: true,
   name: 'user-login',
   data() {
     return {

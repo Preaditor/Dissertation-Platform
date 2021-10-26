@@ -59,6 +59,7 @@
 
 <script>
 export default {
+  hideSidebar: true,
   name: 'signup',
   data() {
     return {
