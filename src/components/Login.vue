@@ -66,10 +66,10 @@ export default {
   methods: {
     Login() {
       this.$state.setActiveComponent('profile');
-      this.$sidestate.setActiveComponent('sidebar');
     },
     Signup() {
       console.log('signup');
+      this.$state.setActiveComponent('signup');
     },
   },
 };

@@ -46,7 +46,7 @@
           "
         >
           Already have an account?
-        <button name="login" id="input-submit" type="button" @click="Login()"> Login </button>
+        <button name="login" id="input-submit" type="button" @click="Login"> Login </button>
         </p>
         <p style="color: red; padding-bottom: 0; width: 500px"></p>
 
@@ -85,6 +85,7 @@ export default {
   methods: {
     Login() {
       console.log('works');
+      this.$state.setActiveComponent('login');
     },
     Signup() {
       console.log('signup');
@@ -95,6 +96,7 @@ export default {
         console.log('passwords dont match');
       } else {
         console.log('password match');
+        this.$state.setActiveComponent('login');
       }
     },
   },
