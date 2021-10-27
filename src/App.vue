@@ -1,7 +1,7 @@
 <template>
   <Wave />
   <component :is="$state.getActiveComponent()"/>
-  <Sidebar v-if="$state.SidebarActive" />
+  <Sidebar v-if="$state.showSidebar" />
 </template>
 
 <script>

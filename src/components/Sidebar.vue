@@ -24,6 +24,10 @@
             <img class="icon" src="@/res/fontawesome/svgs/solid/sign-out-alt-solid.svg">
             <p id="naming">Sign Out</p>
         </div>
+        <div class="side_button" id="report" @click="report">
+            <img class="icon" src="@/res/fontawesome/svgs/solid/clipboard-list.svg">
+            <p id="naming">Report</p>
+        </div>
         <button id="expand" @click="openstate=!openstate">
             <img class="expand_button" src="@/res/fontawesome/svgs/solid/align-left.svg">
         </button>
@@ -61,6 +65,10 @@ export default {
       console.log('progress');
       this.$state.setActiveComponent('progress');
     },
+    report() {
+      console.log('report');
+      this.$state.setActiveComponent('report');
+    },
   },
 };
 </script>
@@ -69,7 +77,7 @@ export default {
 #sidebar {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 2%;
   bottom: 0;
   display: grid;
   grid-auto-rows: min-content;
@@ -95,6 +103,7 @@ export default {
             visibility: hidden;
         }
     }
+
     &.sidebar-expand {
         width: 190px;
         >.side_button {
