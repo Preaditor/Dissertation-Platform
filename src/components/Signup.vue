@@ -85,6 +85,7 @@ export default {
   methods: {
     Login() {
       console.log('works');
+      this.$state.setActiveComponent('login');
     },
     Signup() {
       console.log('signup');
@@ -95,6 +96,7 @@ export default {
         console.log('passwords dont match');
       } else {
         console.log('password match');
+        this.$state.setActiveComponent('login');
       }
     },
   },

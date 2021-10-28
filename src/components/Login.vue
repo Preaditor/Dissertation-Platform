@@ -69,6 +69,7 @@ export default {
     },
     Signup() {
       console.log('signup');
+      this.$state.setActiveComponent('signup');
     },
   },
 };
