@@ -84,6 +84,7 @@ export default {
   width: 90px;
     > .side_button {
         display: grid;
+        column-gap: 5vw;
         grid-auto-columns: min-content;
         justify-content: center;
         align-items: center;
@@ -94,7 +95,7 @@ export default {
             color: black;
             padding: 10px;
             grid-column: 1;
-            align-self: left;
+            position: absolute;
         }
         > #naming {
             grid-column: 2;

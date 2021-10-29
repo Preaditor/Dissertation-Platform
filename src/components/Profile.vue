@@ -32,15 +32,18 @@ export default {
     justify-content: center;
     align-content: center;
     align-items: center;
-}
-.info_container {
-    display: grid;
-}
-.info {
-    font-size: 22px;
-    color: black;
-}
-.data {
-    display: grid;
+    > .info_container {
+        display: grid;
+        font-family: "Manjari", sans-serif;
+        position: absolute;
+        top: 30%;
+        > .data {
+            display: grid;
+            > .info {
+                font-size: 22px;
+                color: black;
+            }
+        }
+    }
 }
 </style>
