@@ -18,6 +18,10 @@
                 <!-- need to add hint for the hidden button -->
                 <p class="info" id="pass" >  ***** </p>
             </div>
+            <div class="data">
+                <p class="naming"> Colour: </p>
+                <p class="info" id="colour">. </p>
+            </div>
         </div>
         <div id="module" class="info_container">
             <!-- maybe dynamically add modules based on current active modules -->
@@ -70,6 +74,10 @@ export default {
                 grid-column: 1;
                 font-size: 24px;
                 color: black;
+            }
+            > #colour {
+                font-size: 80px;
+                color: blue;
             }
         }
     }
