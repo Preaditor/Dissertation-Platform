@@ -2,7 +2,6 @@ import { reactive, markRaw } from 'vue';
 
 import Sidebar from '@/components/Sidebar.vue';
 import Login from '@/components/Login.vue';
-import Settings from '@/components/Settings.vue';
 import Signup from '@/components/Signup.vue';
 import Profile from '@/components/Profile.vue';
 import Modules from '@/components/Modules.vue';
@@ -14,7 +13,6 @@ export default class VueStates {
     this.components = {
       sidebar: markRaw(Sidebar),
       login: markRaw(Login),
-      settings: markRaw(Settings),
       signup: markRaw(Signup),
       profile: markRaw(Profile),
       modules: markRaw(Modules),

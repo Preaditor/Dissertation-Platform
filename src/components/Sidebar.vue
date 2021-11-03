@@ -16,10 +16,6 @@
             <img class="icon" src="@/res/fontawesome/svgs/solid/chart-line.svg">
             <p id="naming">Progress</p>
         </div>
-        <div class="side_button" id="settings" @click="settings">
-            <img class="icon" src="@/res/fontawesome/svgs/solid/gears.svg">
-            <p id="naming">Settings</p>
-        </div>
         <div class="side_button" id="logout" @click="logout">
             <img class="icon" src="@/res/fontawesome/svgs/solid/sign-out-alt-solid.svg">
             <p id="naming">Sign Out</p>
@@ -44,10 +40,6 @@ export default {
   methods: {
     logout() {
       console.log('logout');
-    },
-    settings() {
-      console.log('settings');
-      this.$state.setActiveComponent('settings');
     },
     profile() {
       console.log('profile');

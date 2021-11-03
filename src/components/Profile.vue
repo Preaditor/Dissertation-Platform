@@ -20,7 +20,8 @@
             </div>
             <div class="data">
                 <p class="naming"> Colour: </p>
-                <p class="info" id="colour">. </p>
+                <svg class="info" id="colour">
+                </svg>
             </div>
         </div>
         <div id="module" class="info_container">
