@@ -86,6 +86,19 @@ export default {
         border-color: #3b3b3b;
         border-radius: 30px;
     }
+    > #input-submit {
+              height: 45px;
+        border-radius: 30px;
+        width: 15vw;
+        text-transform: uppercase;
+        color: white;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        background-color: #3f436e;
+        margin-top: 20px;
+        transition: 0.5s all;
+    }
   }
 }
 </style>

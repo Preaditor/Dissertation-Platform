@@ -23,11 +23,11 @@
                 <svg class="info" id="colour">
                 </svg>
             </div>
+            <button id="request_data" @click="GDPR()"> Request Data </button>
         </div>
         <div id="module" class="info_container">
             <!-- maybe dynamically add modules based on current active modules -->
         </div>
-        <button id="request_data" @click="GDPR()"> Request Data </button>
     </div>
 </template>
 
@@ -63,6 +63,7 @@ export default {
         border-style: solid;
         border-color: black;
         border-width: 2px;
+        width: 50%;
         > .data {
             display: grid;
             column-gap: 5%;
@@ -81,19 +82,19 @@ export default {
                 color: blue;
             }
         }
-    }
-    > #request_data {
-        height: 45px;
-        border-radius: 30px;
-        width: 15vw;
-        text-transform: uppercase;
-        color: white;
-        border: none;
-        outline: none;
-        text-decoration: none;
-        background-color: #3f436e;
-        margin-top: 20px;
-        transition: 0.5s all;
+        > #request_data {
+            height: 45px;
+            border-radius: 30px;
+            width: 15vw;
+            text-transform: uppercase;
+            color: white;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            background-color: #3f436e;
+            margin-top: 20px;
+            transition: 0.5s all;
+        }
     }
 }
 </style>
