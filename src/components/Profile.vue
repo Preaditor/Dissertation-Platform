@@ -19,9 +19,15 @@
                 <p class="info" id="pass" >  ***** </p>
             </div>
             <div class="data">
-                <p class="naming"> Colour: </p>
-                <svg class="info" id="colour">
-                </svg>
+              <p class="naming"> Colour: </p>
+              <svg
+              id="colour" class="info"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              :fill="colour">
+                <path d="M512 256c0 141.4-114.6 256-256
+                256s-256-114.6-256-256s114.6-256 256-256S512 114.6 512 256z"/>
+              </svg>
             </div>
             <button id="request_data" @click="GDPR()"> Request Data </button>
         </div>
@@ -35,6 +41,9 @@
 export default {
   name: 'Profile',
   data() {
+    return {
+      colour: '#4779d6',
+    };
   },
   methods: {
     GDPR() {
@@ -78,8 +87,9 @@ export default {
                 color: black;
             }
             > #colour {
-                font-size: 80px;
                 color: blue;
+                height: 40px;
+                width: 40px;
             }
         }
         > #request_data {

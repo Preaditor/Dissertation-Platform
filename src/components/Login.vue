@@ -47,6 +47,7 @@ export default {
       email: '',
       email_valud: true,
       email_pattern: new RegExp(/^\S+@\S+(\.\S+)+$/),
+      pass_pattern: new RegExp(/^.*(?=.{8,})((?=.*[!@#$%^&*()£~'/|\\\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/),
       password: '',
       remember: false,
       testing: 'test123',
@@ -62,9 +63,21 @@ export default {
         ? console.log('input--valid')
         : console.log('input--invalid');
     },
+    // check if password is secure
+    password_check() {
+      if (!this.password) {
+        return '';
+      }
+
+      return this.pass_pattern.test(this.password)
+        ? console.log('input--valid')
+        : console.log('input--invalid');
+    },
   },
   methods: {
     Login() {
+      email_check();
+      password_check();
       this.$state.setActiveComponent('profile');
     },
     Signup() {
