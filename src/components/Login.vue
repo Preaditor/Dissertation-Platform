@@ -22,6 +22,9 @@
         <label>Remember me</label>
         <input id="remember" type="checkbox" value="" v-model="remember" />
       </div>
+      <div id="recaptcha">
+        <!-- insert recaptcha here -->
+      </div>
       <p
         style="
           color: rgb(0, 0, 0);
@@ -141,6 +144,9 @@ export default {
         background-color: #3f436e;
         margin-top: 20px;
         transition: 0.5s all;
+    }
+    > #recaptcha {
+        margin-top: 20px;
     }
     > #Signup {
         height: 45px;
