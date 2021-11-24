@@ -79,8 +79,6 @@ export default {
   },
   methods: {
     Login() {
-      email_check();
-      password_check();
       this.$state.setActiveComponent('profile');
     },
     Signup() {
