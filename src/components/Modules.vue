@@ -1,14 +1,17 @@
 <template>
     <div id="module_container" ref="modules">
       <div id="module_sub">
-        <div
-          v-for="module in modules"
-          class="module"
-          :key="module.id"
-        >
-          <img class="icon" :src="module.image">
-          <label class="title">{{ module.title }}</label>
-          <label class="desc">{{ module.desc }}</label>
+        <div id="Social">
+          <p>Social Engineering</p>
+          <div
+            v-for="module in modules"
+            class="module"
+            :key="module.id"
+          >
+            <img class="icon" :src="module.image">
+            <label class="title">{{ module.title }}</label>
+            <label class="desc">{{ module.desc }}</label>
+          </div>
         </div>
       </div>
     </div>
@@ -61,28 +64,33 @@ export default {
     position: absolute;
     top: 30%;
     padding: 20px;
-    > .module {
-    display: grid;
-    column-gap: 20px;
-    row-gap: 20px;
-    font-family: "Manjari", sans-serif;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    > .icon {
-      width: 80px;
-      height: 80px;
-      grid-row: 2;
-      grid-column: 1;
+    > #social {
+      border-style: solid;
+      border-width: 10px;
+      border-color: black;
     }
-    > .title {
-      grid-row: 1;
-      grid-column: 1;
-    }
-    > .desc {
-      grid-row: 2;
-      grid-column: 2;
-    }
+      > .module {
+        display: grid;
+        column-gap: 20px;
+        row-gap: 20px;
+        font-family: "Manjari", sans-serif;
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
+        > .icon {
+          width: 80px;
+          height: 80px;
+          grid-row: 2;
+          grid-column: 1;
+        }
+        > .title {
+          grid-row: 1;
+          grid-column: 1;
+        }
+        > .desc {
+          grid-row: 2;
+          grid-column: 2;
+        }
   }
   }
 }
