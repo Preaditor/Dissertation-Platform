@@ -69,9 +69,6 @@ export default {
         font-family: "Manjari", sans-serif;
         position: absolute;
         top: 30%;
-        border-style: solid;
-        border-color: black;
-        border-width: 2px;
         width: 50%;
         > .data {
             display: grid;
@@ -90,6 +87,7 @@ export default {
                 color: blue;
                 height: 40px;
                 width: 40px;
+                align-self: right;
             }
         }
         > #request_data {
@@ -104,6 +102,7 @@ export default {
             background-color: #3f436e;
             margin-top: 20px;
             transition: 0.5s all;
+            justify-self: center;
         }
     }
 }
