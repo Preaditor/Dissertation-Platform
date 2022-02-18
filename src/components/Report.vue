@@ -52,6 +52,19 @@ export default {
   methods: {
     Report() {
       console.log(this.issue_name, this.issue_desc, this.issue_page);
+      return fetch('//192.168.1.104:3000/api/report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          reportdata: [{
+            Report_Name: this.issue_name,
+            Report_Description: this.issue_desc,
+            Report_Type: this.issue_page,
+          }],
+        }),
+      });
     },
   },
 };

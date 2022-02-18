@@ -40,6 +40,7 @@ export default {
   methods: {
     logout() {
       console.log('logout');
+      this.$state.setActiveComponent('login');
     },
     profile() {
       console.log('profile');

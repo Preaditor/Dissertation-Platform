@@ -61,6 +61,8 @@
 </template>
 
 <script>
+const crypto = require('crypto');
+
 export default {
   name: 'signup',
   data() {
@@ -91,16 +93,54 @@ export default {
       this.$state.setActiveComponent('login');
     },
     Signup() {
-      console.log('signup');
-      if (this.pass1.length < 8) {
-        console.log('password too short');
+      function genRandomString(length) {
+        return crypto.randomBytes(Math.ceil(length / 2))
+          .toString('hex') /** convert to hexadecimal format */
+          .slice(0, length); /** return required number of characters */
       }
-      if (this.pass1 !== this.pass2) {
-        console.log('passwords dont match');
-      } else {
-        console.log('password match');
-        this.$state.setActiveComponent('login');
+      function sha512(password, salt) {
+        const hash = crypto.createHmac('sha512', salt); /** Hashing algorithm sha512 */
+        hash.update(password);
+        const value = hash.digest('hex');
+        return {
+          salt: salt,
+          passwordHash: value,
+        };
       }
+
+      function saltHashPassword(userpassword) {
+        const salt = genRandomString(16); /** Gives us salt of length 16 */
+        const passwordData = sha512(userpassword, salt);
+        console.log('UserPassword = ' + userpassword);
+        console.log('Passwordhash = ' + passwordData.passwordHash);
+        console.log('Salt = ' + passwordData.salt);
+      }
+      saltHashPassword(this.pass1);
+      return fetch('//localhost:3000/api/sign_up', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          signupinfo: [{
+            First_Name: this.fname,
+            Last_Name: this.lname,
+            Email: this.email,
+          }],
+        }),
+      }).then(() => {
+        console.log('signup');
+        if (this.pass1.length < 8) {
+          console.log('password too short');
+        }
+        if (this.pass1 !== this.pass2) {
+          console.log('passwords dont match');
+        } else {
+          console.log('password match');
+          // database.signup();
+          // this.$state.setActiveComponent('login');
+        }
+      });
     },
   },
 };
