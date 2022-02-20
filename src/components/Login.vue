@@ -79,7 +79,26 @@ export default {
   },
   methods: {
     Login() {
-      this.$state.setActiveComponent('profile');
+      return fetch('//192.168.1.104:3000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          logindata: [{
+            Email: this.email,
+            Pass: this.password,
+          }],
+        }),
+      }).then((response) => {
+        console.log(response);
+        if (response.status === 200) {
+          console.log('login success');
+          this.$state.setActiveComponent('profile');
+        } else {
+          console.log('login failed');
+        }
+      });
     },
     Signup() {
       console.log('signup');
