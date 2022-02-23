@@ -92,6 +92,10 @@ export default {
     },
     Signup() {
       console.log('signup');
+      if (this.email === '' || this.pass1 === '' || this.pass2 === '' || this.fname === '' || this.lname === '') {
+        console.log('empty');
+        alert('Please fill out all fields');
+      }
       if (this.pass1.length < 8) {
         console.log('password too short');
       }

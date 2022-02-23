@@ -79,26 +79,42 @@ export default {
   },
   methods: {
     Login() {
-      return fetch('//192.168.1.104:3000/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          logindata: [{
-            Email: this.email,
-            Pass: this.password,
-          }],
-        }),
-      }).then((response) => {
-        console.log(response);
-        if (response.status === 200) {
-          console.log('login success');
-          this.$state.setActiveComponent('profile');
-        } else {
-          console.log('login failed');
-        }
-      });
+      if (this.email === '' || this.password === '') {
+        console.log('empty');
+        alert('Please fill out all fields');
+      } else {
+        console.log('works');
+        return fetch('//192.168.1.104:3000/api/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            logindata: [{
+              Email: this.email,
+              Pass: this.password,
+            }],
+          }),
+        }).then((response) => {
+          console.log(response);
+          if (response.status === 200) {
+            console.log('login success');
+            console.log(response);
+            response.json().then((data) => {
+              // do something with your data
+              console.log(data);
+              console.log(data.Email);
+              localStorage.setItem('user', data.Email);
+              localStorage.setItem('fname', data.First_Name);
+              localStorage.setItem('lname', data.Last_Name);
+            });
+            this.$state.setActiveComponent('profile');
+          } else {
+            console.log('login failed');
+          }
+        });
+      }
+      return true;
     },
     Signup() {
       console.log('signup');

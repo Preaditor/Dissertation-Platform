@@ -3,15 +3,15 @@
         <div id="general" class="info_container">
             <div class="data">
                 <p class="naming"> Email: </p>
-                <p class="info" id="email"> Email </p>
+                <p class="info" id="email" :innerHTML="user"> </p>
             </div>
             <div class="data">
                 <p class="naming"> First Name: </p>
-                <p class="info" id="fname"> First Name </p>
+                <p class="info" id="fname" :innerHTML="fname"> </p>
             </div>
             <div class="data">
                 <p class="naming"> Last Name: </p>
-                <p class="info" id="lname"> Last Name </p>
+                <p class="info" id="lname" :innerHTML="lname"> </p>
             </div>
             <div class="data">
                 <p class="naming" @click="change_pass()"> Password: </p>
@@ -43,6 +43,9 @@ export default {
   data() {
     return {
       colour: '#4779d6',
+      user: localStorage.getItem('user'),
+      fname: localStorage.getItem('fname'),
+      lname: localStorage.getItem('lname'),
     };
   },
   methods: {
