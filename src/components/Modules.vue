@@ -8,8 +8,8 @@
             class="module"
             :key="module.id"
           >
-            <img class="icon" :src="module.image">
-            <label class="title">{{ module.title }}</label>
+            <img class="icon" :src="module.image"/>
+            <p class="title">{{ module.title }}</p>
             <label class="desc">{{ module.desc }}</label>
           </div>
         </div>
@@ -55,42 +55,41 @@ export default {
 <style lang="less">
 #module_container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
   text-align: center;
+      height: 100%;
   > #module_sub {
-    position: absolute;
     top: 30%;
+    position: absolute;
     padding: 20px;
-    > #social {
-      border-style: solid;
-      border-width: 10px;
-      border-color: black;
-    }
+                  justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    > #Social {
       > .module {
         display: grid;
-        column-gap: 20px;
-        row-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+          "."
+          "."
+          ".";
         font-family: "Manjari", sans-serif;
-        border-style: solid;
-        border-width: 2px;
-        border-color: black;
-        > .icon {
-          width: 80px;
-          height: 80px;
-          grid-row: 2;
-          grid-column: 1;
-        }
         > .title {
           grid-row: 1;
-          grid-column: 1;
+        }
+        > .icon {
+          grid-row: 2;
         }
         > .desc {
-          grid-row: 2;
-          grid-column: 2;
+          grid-row: 3;
         }
-  }
+      }
+    }
   }
 }
 </style>
