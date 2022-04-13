@@ -91,11 +91,41 @@ export default {
       comment: '',
     };
   },
+  methods: {
+    submit() {
+      return fetch('//192.168.1.104:3000/api/feedback', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          feedbackdata: [{
+            Interface_Score: this.inter_value,
+            Content_Score: this.content_value,
+            Design_Score: this.design_value,
+            Usability_Score: this.usability_value,
+            Overall_Score: this.overall_value,
+            Comments: this.comment,
+          }],
+        }),
+      }).then((response) => {
+        console.log(response);
+        if (response.status === 200) {
+          alert('Thank you for your feedback!');
+          this.$state.setActiveComponent('profile');
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      });
+    },
+  },
 };
 </script>
 
 <style lang="less">
-.form {
+#feedback {
+  top: 30%;
+  > .form {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -107,10 +137,10 @@ export default {
     border-radius: 5px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     > div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        > input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > input {
         width: 60%;
         outline: none;
         border: none;
@@ -122,13 +152,15 @@ export default {
         border-width: 5px;
         border-color: #3b3b3b;
         border-radius: 30px;
-    }
-    > h1 {
+      }
+      > h1 {
         font-size: 14px;
         margin-top: 20px;
         margin-left: 20px;
         color: #3b3b3b;
+      }
     }
-    }
+}
+
 }
 </style>

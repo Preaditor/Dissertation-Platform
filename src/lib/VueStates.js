@@ -22,7 +22,7 @@ export default class VueStates {
       feedback: markRaw(Feedback),
     };
     this.reactive = reactive(Object.create(null));
-    this.reactive.activeComponent = this.components.feedback;
+    this.reactive.activeComponent = this.components.login;
     this.reactive.showSidebar = false;
   }
 

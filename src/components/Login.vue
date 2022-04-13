@@ -79,7 +79,7 @@ export default {
   },
   methods: {
     Login() {
-      this.$state.setActiveComponent('profile');
+      this.$state.setActiveComponent('feedback');
       if (this.email === '' || this.password === '') {
         console.log('empty');
         alert('Please fill out all fields');
