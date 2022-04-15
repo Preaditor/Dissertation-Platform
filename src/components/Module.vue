@@ -2,9 +2,10 @@
   <div id="module_interact">
     <div id="nav">
           <button v-for="module in nav"
+          :id="module.id"
           class="nav_button"
           :key="module.id"
-          @click="module.func">{{ module.title }}</button>
+          @click="intro($event)">{{ module.title }}</button>
     </div>
     <div id="interaction">
     </div>
@@ -61,8 +62,18 @@ export default {
     };
   },
   methods: {
-    intro() {
+    intro(e) {
+      console.log(e.value);
+      console.log(e);
+      console.log(e.target.innerHTML);
       console.log('test');
+      let selected = e.target.innerHTML;
+      selected = selected.toLowerCase();
+      if (selected === 'phishing') {
+        console.log('selected section: phishing');
+      } else if (selected === 'ransom') {
+        console.log('selected section: ransom');
+      }
     },
   },
 };
