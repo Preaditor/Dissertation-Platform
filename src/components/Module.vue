@@ -8,10 +8,35 @@
           @click="intro($event)">{{ module.title }}</button>
     </div>
     <div id="interaction">
-      <p class="title"> Title</p>
-      <h1 class="detail"> Detial</h1>
+      <h1 class="title"> Phishing</h1>
+      <p class="detail">
+        Frontend is a common term for the interface and features the user will interact with,
+        it is here where the design and overall look of the app/website is implemented.
+        However, with the design, it is imperative that various factors are considered such as
+        accessibility and ease of use are well thought-out, this allows more people
+        to use the site with minimal difficulty. Moreover, “The objective of designing a site is to
+        ensure that when the users open up the site they see the information
+        in a format that is easy to read and relevant”, this statement suggests that any none
+        essential pieces of information should be removed. Furthermore, frontend
+        development needs to take into account of changing factors such as display size,
+        resolution as well as browser specific differences,
+        all of the previous factor into the overall development time and resources required.
+      </p>
       <img class="image_1" src="https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg"/>
       <img class="image_2" src="https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg"/>
+      <p class="detail_r">
+        Frontend is a common term for the interface and features the user will interact with,
+        it is here where the design and overall look of the app/website is implemented.
+        However, with the design, it is imperative that various factors are considered such as
+        accessibility and ease of use are well thought-out, this allows more people
+        to use the site with minimal difficulty. Moreover, “The objective of designing a site is to
+        ensure that when the users open up the site they see the information
+        in a format that is easy to read and relevant”, this statement suggests that any none
+        essential pieces of information should be removed. Furthermore, frontend
+        development needs to take into account of changing factors such as display size,
+        resolution as well as browser specific differences,
+        all of the previous factor into the overall development time and resources required.
+      </p>
     </div>
   </div>
 </template>
@@ -104,16 +129,16 @@ export default {
 
 <style lang="less">
 #module_interact {
+  margin: auto;
+  padding-top: 5%;
   > #nav {
-    padding-top: 2%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
     > .nav_button {
-            height: 45px;
+        height: 45px;
         border-radius: 30px;
         width: 15vw;
         text-transform: uppercase;
@@ -130,31 +155,69 @@ export default {
       margin: auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 0px 0px;
+      grid-template-rows: 0.2fr 1fr 1fr;
+      gap: 0px 2%;
       grid-template-areas:
       ". ."
       ". ."
       ". .";
       width: 80%;
-      height: 80%;
+      height: 50%;
       border-color: black;
       border-style: solid;
       border-width: 3px;
+      text-align: center;
+      align-items: center;
       > .title {
-        grid-row: 1;
-        text-align: left;
+      grid-row: 1;
+      text-align: left;
+      border-color: black;
+      border-style: solid;
+      border-width: 3px;
       }
-      > .detial {
+      > .detail {
         grid-row: 2;
+        grid-column: 1;
         float: left;
+        align-self: center;
+        justify-self: center;
+        border-color: black;
+      border-style: solid;
+      border-width: 3px;
+      }
+      > .detail_r {
+        grid-row: 3;
+        grid-column: 2;
+        float: right;
+        align-self: center;
+        justify-self: center;
+        border-color: black;
+      border-style: solid;
+      border-width: 3px;
       }
       > .image_1 {
+        height: 80%;
+        width: 80%;
         grid-row: 2;
+        grid-column: 2;
+        align-self: center;
+        justify-self: center;
         float: right;
+              border-color: black;
+      border-style: solid;
+      border-width: 3px;
       }
       > .image_2 {
-
+        height: 80%;
+        width: 80%;
+        grid-row: 3;
+        grid-column: 1;
+        align-self: center;
+        justify-self: center;
+        float: right;
+              border-color: black;
+      border-style: solid;
+      border-width: 3px;
       }
   }
 }
