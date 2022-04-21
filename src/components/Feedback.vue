@@ -68,7 +68,7 @@
                 type="text"
                 name="comments"
                 placeholder="Comments"
-                v-model="comments"
+                v-model="comment"
               />
             </div>
             <div id="submit">

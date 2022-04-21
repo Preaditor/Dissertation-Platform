@@ -79,7 +79,6 @@ export default {
   },
   methods: {
     Login() {
-      this.$state.setActiveComponent('feedback');
       if (this.email === '' || this.password === '') {
         console.log('empty');
         alert('Please fill out all fields');
@@ -109,7 +108,7 @@ export default {
               localStorage.setItem('fname', data.First_Name);
               localStorage.setItem('lname', data.Last_Name);
             });
-            this.$state.setActiveComponent('profile');
+            this.$state.setActiveComponent('feedback');
           } else {
             console.log('login failed');
           }
