@@ -93,7 +93,7 @@ export default {
   },
   methods: {
     submit() {
-      return fetch('//192.168.1.121:3000/api/feedback', {
+      return fetch('//192.168.1.104:3000/api/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

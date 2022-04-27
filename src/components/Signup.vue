@@ -103,7 +103,7 @@ export default {
         console.log('passwords dont match');
       } else {
         console.log('password match');
-        return fetch('//192.168.1.121:3000/api/sign_up', {
+        return fetch('//192.168.1.104:3000/api/sign_up', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -84,7 +84,7 @@ export default {
         alert('Please fill out all fields');
       } else {
         console.log('works');
-        return fetch('//192.168.1.121:3000/api/login', {
+        return fetch('//192.168.1.104:3000/api/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
