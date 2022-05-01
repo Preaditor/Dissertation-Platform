@@ -23,7 +23,7 @@
           v-model="pass2"
           placeholder="Confirm Password"
         />
-        <input
+        <!-- <input
           id="input-firstname"
           class="user_info"
           type="text"
@@ -36,7 +36,7 @@
           type="text"
           v-model="lname"
           placeholder="Last Name"
-        />
+        /> -->
         <div id="recaptcha">
           <!-- insert recaptcha here -->
         </div>
@@ -70,8 +70,8 @@ export default {
       email_pattern: new RegExp(/^\S+@\S+(\.\S+)+$/),
       pass1: '',
       pass2: '',
-      fname: '',
-      lname: '',
+      // fname: '',
+      // lname: '',
     };
   },
   computed: {
@@ -92,7 +92,7 @@ export default {
     },
     Signup() {
       console.log('signup');
-      if (this.email === '' || this.pass1 === '' || this.pass2 === '' || this.fname === '' || this.lname === '') {
+      if (this.email === '' || this.pass1 === '' || this.pass2 === '') {
         console.log('empty');
         alert('Please fill out all fields');
       }
@@ -103,15 +103,15 @@ export default {
         console.log('passwords dont match');
       } else {
         console.log('password match');
-        return fetch('//192.168.1.104:3000/api/sign_up', {
+        return fetch('//cyber.happy-bucket.co.uk:3000/api/sign_up', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
             signupinfo: [{
-              First_Name: this.fname,
-              Last_Name: this.lname,
+              // First_Name: this.fname,
+              // Last_Name: this.lname,
               Email: this.email,
               Pass: this.pass1,
             }],

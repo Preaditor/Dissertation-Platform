@@ -93,7 +93,7 @@ export default {
   },
   methods: {
     submit() {
-      return fetch('//192.168.1.104:3000/api/feedback', {
+      return fetch('//cyber.happy-bucket.co.uk:3000/api/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -124,8 +124,12 @@ export default {
 
 <style lang="less">
 #feedback {
-  top: 30%;
-  > .form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  > #module_feedback {
+    top: 30%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;

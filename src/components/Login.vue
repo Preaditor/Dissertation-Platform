@@ -7,7 +7,7 @@
         class="user_info"
         type="text"
         name="email"
-        placeholder="Email"
+        placeholder="Username"
         v-model="email"
       />
       <input
@@ -53,7 +53,6 @@ export default {
       pass_pattern: new RegExp(/^.*(?=.{8,})((?=.*[!@#$%^&*()£~'/|\\\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/),
       password: '',
       remember: false,
-      testing: 'test123',
     };
   },
   computed: {
@@ -84,7 +83,7 @@ export default {
         alert('Please fill out all fields');
       } else {
         console.log('works');
-        return fetch('//192.168.1.104:3000/api/login', {
+        return fetch('//cyber.happy-bucket.co.uk:3000/api/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -105,8 +104,6 @@ export default {
               console.log(data);
               console.log(data.Email);
               localStorage.setItem('user', data.Email);
-              localStorage.setItem('fname', data.First_Name);
-              localStorage.setItem('lname', data.Last_Name);
             });
             this.$state.setActiveComponent('feedback');
           } else {

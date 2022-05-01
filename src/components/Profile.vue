@@ -6,14 +6,6 @@
                 <p class="info" id="email" :innerHTML="user"> </p>
             </div>
             <div class="data">
-                <p class="naming"> First Name: </p>
-                <p class="info" id="fname" :innerHTML="fname"> </p>
-            </div>
-            <div class="data">
-                <p class="naming"> Last Name: </p>
-                <p class="info" id="lname" :innerHTML="lname"> </p>
-            </div>
-            <div class="data">
                 <p class="naming" @click="change_pass()"> Password: </p>
                 <!-- need to add hint for the hidden button -->
                 <p class="info" id="pass" >  ***** </p>
@@ -44,8 +36,6 @@ export default {
     return {
       colour: '#4779d6',
       user: localStorage.getItem('user'),
-      fname: localStorage.getItem('fname'),
-      lname: localStorage.getItem('lname'),
     };
   },
   methods: {
