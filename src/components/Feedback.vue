@@ -1,81 +1,81 @@
 <template>
-    <div id="feedback">
-        <form class="form" id="module_feedback" @submit.prevent="submit">
-            <div id="interface_score">
-              <input
-                id="interface"
-                class="feedback_info"
-                type="range"
-                name="interface"
-                min="1"
-                max="10"
-                v-model="inter_value"
-              />
-              <h1 text-align="center">Score: {{ inter_value }}</h1>
-            </div>
-            <div id="content_score">
-              <input
-                id="content"
-                class="feedback_info"
-                type="range"
-                name="content"
-                min="1"
-                max="10"
-                v-model="content_value"
-              />
-              <h1 text-align="center">Score: {{ content_value }}</h1>
-            </div>
-            <div id="design_score">
-              <input
-                id="design"
-                class="feedback_info"
-                type="range"
-                name="design"
-                min="1"
-                max="10"
-                v-model="design_value"
-              />
-              <h1 text-align="center">Score: {{ design_value }}</h1>
-            </div>
-            <div id="usability_score">
-              <input
-                id="usability"
-                class="feedback_info"
-                type="range"
-                name="usability"
-                min="1"
-                max="10"
-                v-model="usability_value"
-              />
-              <h1 text-align="center">Score: {{ usability_value }}</h1>
-            </div>
-            <div id="overall_score">
-              <input
-                id="overall"
-                class="feedback_info"
-                type="range"
-                name="overall"
-                min="1"
-                max="10"
-                v-model="overall_value"
-              />
-              <h1 text-align="center">Score: {{ overall_value }}</h1>
-            </div>
-            <div id="comments">
-              <textarea
-                id="comments"
-                class="feedback_info"
-                type="text"
-                name="comments"
-                placeholder="Comments"
-                v-model="comment"
-              />
-            </div>
-            <div id="submit">
-              <button id="submit" type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
+  <div id="feedback">
+    <form class="form" id="module_feedback" @submit.prevent="submit">
+      <div id="interface_score">
+        <input
+          id="interface"
+          class="feedback_info"
+          type="range"
+          name="interface"
+          min="1"
+          max="10"
+          v-model="inter_value"
+        />
+        <h1 text-align="center">Score: {{ inter_value }}</h1>
+      </div>
+      <div id="content_score">
+        <input
+          id="content"
+          class="feedback_info"
+          type="range"
+          name="content"
+          min="1"
+          max="10"
+           v-model="content_value"
+        />
+        <h1 text-align="center">Score: {{ content_value }}</h1>
+      </div>
+      <div id="design_score">
+        <input
+          id="design"
+          class="feedback_info"
+          type="range"
+          name="design"
+          min="1"
+          max="10"
+          v-model="design_value"
+        />
+        <h1 text-align="center">Score: {{ design_value }}</h1>
+      </div>
+      <div id="usability_score">
+        <input
+          id="usability"
+          class="feedback_info"
+          type="range"
+          name="usability"
+          min="1"
+          max="10"
+          v-model="usability_value"
+        />
+        <h1 text-align="center">Score: {{ usability_value }}</h1>
+      </div>
+      <div id="overall_score">
+        <input
+          id="overall"
+          class="feedback_info"
+          type="range"
+          name="overall"
+          min="1"
+          max="10"
+          v-model="overall_value"
+        />
+        <h1 text-align="center">Score: {{ overall_value }}</h1>
+      </div>
+      <div id="add_comments">
+        <textarea
+          id="comments"
+          class="feedback_info"
+          type="text"
+          name="comments"
+          placeholder="Comments"
+          v-model="comment"
+        />
+      </div>
+      <div id="submit">
+        <button id="submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -163,6 +163,29 @@ export default {
         margin-left: 20px;
         color: #3b3b3b;
       }
+      > #comments {
+        width: 60%;
+        height: 45px;
+        margin-left: 20px;
+        margin-top: 20px;
+        color: #3b3b3b;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #3b3b3b;
+      }
+      > #submit {
+        height: 45px;
+        border-radius: 30px;
+        width: 15vw;
+        text-transform: uppercase;
+        color: white;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        background-color: #3f436e;
+        margin-top: 20px;
+        transition: 0.5s all;
+    }
     }
 }
 
