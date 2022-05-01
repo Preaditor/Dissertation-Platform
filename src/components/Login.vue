@@ -162,6 +162,21 @@ export default {
         font-size: 18px;
         text-align: center;
     }
+    > p {
+      > #Signup {
+        height: 45px;
+        border-radius: 30px;
+        width: 5vw;
+        text-transform: uppercase;
+        color: white;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        background-color: #3f436e;
+        margin-top: 20px;
+        transition: 0.5s all;
+    }
+    }
     > #input-submit {
         height: 45px;
         border-radius: 30px;
@@ -177,19 +192,6 @@ export default {
     }
     > #recaptcha {
         margin-top: 20px;
-    }
-    > #Signup {
-        height: 45px;
-        border-radius: 30px;
-        width: 5vw;
-        text-transform: uppercase;
-        color: white;
-        border: none;
-        outline: none;
-        text-decoration: none;
-        background-color: #3f436e;
-        margin-top: 20px;
-        transition: 0.5s all;
     }
     > #title-main {
         font-size: 2vw;

@@ -7,7 +7,7 @@
           class="user_info"
           type="text"
           v-model="email"
-          placeholder="Email"
+          placeholder="Username"
         />
         <input
           id="input-p"
@@ -168,7 +168,8 @@ export default {
         font-size: 18px;
         text-align: center;
     }
-    > #input-submit {
+    > p {
+      > #input-submit {
         height: 45px;
         border-radius: 30px;
         width: 15vw;
@@ -180,6 +181,7 @@ export default {
         background-color: #3f436e;
         margin-top: 20px;
         transition: 0.5s all;
+    }
     }
     > #recaptcha {
       width: 20vw;
