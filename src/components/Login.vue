@@ -18,10 +18,6 @@
         placeholder="Password"
         v-model="password"
       />
-      <div id="remember_info">
-        <label>Remember me</label>
-        <input id="remember" type="checkbox" value="" v-model="remember" />
-      </div>
       <div id="recaptcha">
         <!-- insert recaptcha here -->
       </div>
@@ -52,7 +48,6 @@ export default {
       email_pattern: new RegExp(/^\S+@\S+(\.\S+)+$/),
       pass_pattern: new RegExp(/^.*(?=.{8,})((?=.*[!@#$%^&*()£~'/|\\\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/),
       password: '',
-      remember: false,
     };
   },
   computed: {
@@ -195,9 +190,6 @@ export default {
     }
     > #title-main {
         font-size: 2vw;
-    }
-    > #remember_info {
-        display: inline-block;
     }
   }
 }
