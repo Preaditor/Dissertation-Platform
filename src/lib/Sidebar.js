@@ -16,6 +16,7 @@ export default class SidebarStates {
   }
 
   setActiveComponent(name) {
+    console.log(name);
     this.reactive.activeComponent = this.components[name] || this.components.notfound;
   }
 }
