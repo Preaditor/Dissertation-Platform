@@ -53,28 +53,33 @@ export default {
 
 <style lang="less">
 #main_container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
     > .info_container {
-        display: grid;
-        font-family: "Manjari", sans-serif;
         position: absolute;
         top: 30%;
-        width: 50%;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
         > .data {
-            display: grid;
-            column-gap: 5%;
-            > .info {
-                grid-column: 2;
-                font-size: 22px;
-                color: black;
-            }
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
             > .naming {
-                grid-column: 1;
-                font-size: 24px;
-                color: black;
+                padding-right: 5%;
+                font-size: 2em;
+                font-weight: bold;
+            }
+            > .info {
+                font-size: 2em;
+                font-weight: bold;
+                color: #4779d6;
             }
             > #colour {
                 color: blue;

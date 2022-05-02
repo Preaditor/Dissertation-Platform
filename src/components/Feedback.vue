@@ -129,6 +129,7 @@ export default {
   align-content: center;
   align-items: center;
   > #module_feedback {
+    position: absolute;
     top: 30%;
     display: flex;
     flex-flow: column wrap;
