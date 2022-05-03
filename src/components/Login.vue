@@ -100,7 +100,7 @@ export default {
               console.log(data.Email);
               localStorage.setItem('user', data.Email);
             });
-            this.$state.setActiveComponent('feedback');
+            this.$state.setActiveComponent('profile');
           } else {
             console.log('login failed');
           }

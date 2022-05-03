@@ -9,33 +9,11 @@
     </div>
     <div id="interaction">
       <h1 class="title"> Phishing</h1>
-      <p class="detail">
-        Frontend is a common term for the interface and features the user will interact with,
-        it is here where the design and overall look of the app/website is implemented.
-        However, with the design, it is imperative that various factors are considered such as
-        accessibility and ease of use are well thought-out, this allows more people
-        to use the site with minimal difficulty. Moreover, “The objective of designing a site is to
-        ensure that when the users open up the site they see the information
-        in a format that is easy to read and relevant”, this statement suggests that any none
-        essential pieces of information should be removed. Furthermore, frontend
-        development needs to take into account of changing factors such as display size,
-        resolution as well as browser specific differences,
-        all of the previous factor into the overall development time and resources required.
+      <p class="detail" id="sect1">
       </p>
-      <img class="image_1" src="https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg"/>
-      <img class="image_2" src="https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg"/>
-      <p class="detail_r">
-        Frontend is a common term for the interface and features the user will interact with,
-        it is here where the design and overall look of the app/website is implemented.
-        However, with the design, it is imperative that various factors are considered such as
-        accessibility and ease of use are well thought-out, this allows more people
-        to use the site with minimal difficulty. Moreover, “The objective of designing a site is to
-        ensure that when the users open up the site they see the information
-        in a format that is easy to read and relevant”, this statement suggests that any none
-        essential pieces of information should be removed. Furthermore, frontend
-        development needs to take into account of changing factors such as display size,
-        resolution as well as browser specific differences,
-        all of the previous factor into the overall development time and resources required.
+      <img class="image_1" id="img1" src=""/>
+      <img class="image_2" id="img2" src=""/>
+      <p class="detail_r" id="sect2">
       </p>
     </div>
   </div>
@@ -52,32 +30,24 @@ export default {
           title: 'Phishing',
           desc: 'test test test',
           active: false,
-          image: 'data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0-beta2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M448 384c0 53.02-42.98 96-96 96s-96-42.98-96-96c0-3.984 .7012-7.776 1.174-11.63l-94.68-47.34C145.2 341.7 121.9 352 96 352c-53.02 0-96-42.98-96-96s42.98-96 96-96c25.86 0 49.23 10.34 66.5 26.97l94.68-47.34C256.7 135.8 256 131.1 256 128c0-53.02 42.98-96 96-96s96 42.98 96 96s-42.98 96-96 96c-25.86 0-49.23-10.34-66.5-26.97l-94.68 47.34C191.3 248.2 192 252 192 256S191.3 263.8 190.8 267.6l94.68 47.34C302.8 298.3 326.1 288 352 288C405 288 448 330.1 448 384z"/></svg>',
-          func: 'intro',
         },
         {
           id: 1,
           title: 'Ransom',
           desc: 'test test test',
           active: false,
-          image: 'data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0-beta2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M448 384c0 53.02-42.98 96-96 96s-96-42.98-96-96c0-3.984 .7012-7.776 1.174-11.63l-94.68-47.34C145.2 341.7 121.9 352 96 352c-53.02 0-96-42.98-96-96s42.98-96 96-96c25.86 0 49.23 10.34 66.5 26.97l94.68-47.34C256.7 135.8 256 131.1 256 128c0-53.02 42.98-96 96-96s96 42.98 96 96s-42.98 96-96 96c-25.86 0-49.23-10.34-66.5-26.97l-94.68 47.34C191.3 248.2 192 252 192 256S191.3 263.8 190.8 267.6l94.68 47.34C302.8 298.3 326.1 288 352 288C405 288 448 330.1 448 384z"/></svg>',
-          func: 'intro',
         },
         {
           id: 2,
           title: 'Social',
           desc: 'test test test',
           active: false,
-          image: 'data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0-beta2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M448 384c0 53.02-42.98 96-96 96s-96-42.98-96-96c0-3.984 .7012-7.776 1.174-11.63l-94.68-47.34C145.2 341.7 121.9 352 96 352c-53.02 0-96-42.98-96-96s42.98-96 96-96c25.86 0 49.23 10.34 66.5 26.97l94.68-47.34C256.7 135.8 256 131.1 256 128c0-53.02 42.98-96 96-96s96 42.98 96 96s-42.98 96-96 96c-25.86 0-49.23-10.34-66.5-26.97l-94.68 47.34C191.3 248.2 192 252 192 256S191.3 263.8 190.8 267.6l94.68 47.34C302.8 298.3 326.1 288 352 288C405 288 448 330.1 448 384z"/></svg>',
-          func: 'intro',
         },
         {
           id: 3,
-          title: 'test',
+          title: 'Quiz',
           desc: 'test test test',
           active: false,
-          image: 'data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0-beta2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M448 384c0 53.02-42.98 96-96 96s-96-42.98-96-96c0-3.984 .7012-7.776 1.174-11.63l-94.68-47.34C145.2 341.7 121.9 352 96 352c-53.02 0-96-42.98-96-96s42.98-96 96-96c25.86 0 49.23 10.34 66.5 26.97l94.68-47.34C256.7 135.8 256 131.1 256 128c0-53.02 42.98-96 96-96s96 42.98 96 96s-42.98 96-96 96c-25.86 0-49.23-10.34-66.5-26.97l-94.68 47.34C191.3 248.2 192 252 192 256S191.3 263.8 190.8 267.6l94.68 47.34C302.8 298.3 326.1 288 352 288C405 288 448 330.1 448 384z"/></svg>',
-          func: 'intro',
         },
       ],
       content: [
@@ -107,6 +77,10 @@ export default {
   },
   methods: {
     intro(e) {
+      const sect1 = document.getElementById('sect1');
+      const sect2 = document.getElementById('sect2');
+      const img1 = document.getElementById('img1');
+      const img2 = document.getElementById('img2');
       console.log(e.value);
       console.log(e);
       console.log(e.target.innerHTML);
@@ -115,12 +89,25 @@ export default {
       const selected = e.target.id;
       if (selected === '0') {
         console.log('selected section: phishing');
+        sect1.innerHTML = '';
+        sect2.innerHTML = 'test';
+        img1.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
+        img2.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
       } else if (selected === '1') {
         console.log('selected section: ransom');
+        sect1.innerHTML = 'test';
+        sect2.innerHTML = 'test';
+        img1.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
+        img2.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
       } else if (selected === '2') {
         console.log('Selected section: Social');
+        sect1.innerHTML = 'test';
+        sect2.innerHTML = 'test';
+        img1.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
+        img2.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
       } else if (selected === '3') {
-        console.log('Selected section: test');
+        console.log('Selected section: Quiz');
+        this.$state.setActiveComponent('quiz');
       }
     },
   },
@@ -132,6 +119,7 @@ export default {
   margin: auto;
   padding-top: 5%;
   > #nav {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
