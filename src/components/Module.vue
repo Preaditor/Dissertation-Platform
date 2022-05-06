@@ -8,7 +8,7 @@
           @click="intro($event)">{{ module.title }}</button>
     </div>
     <div id="interaction">
-      <h1 class="title"> Phishing</h1>
+      <h1 class="title" id="title"> Phishing</h1>
       <p class="detail" id="sect1">
       </p>
       <img class="image_1" id="img1" src=""/>
@@ -20,6 +20,9 @@
 </template>
 
 <script>
+const content = require('../lib/content.json');
+
+console.log(content);
 export default {
   name: 'Module',
   data() {
@@ -81,6 +84,7 @@ export default {
       const sect2 = document.getElementById('sect2');
       const img1 = document.getElementById('img1');
       const img2 = document.getElementById('img2');
+      const title = document.getElementById('title');
       console.log(e.value);
       console.log(e);
       console.log(e.target.innerHTML);
@@ -89,22 +93,26 @@ export default {
       const selected = e.target.id;
       if (selected === '0') {
         console.log('selected section: phishing');
-        sect1.innerHTML = '';
-        sect2.innerHTML = 'test';
-        img1.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
-        img2.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
+        sect1.innerText = content.phishing[0].text1;
+        sect2.innerText = content.phishing[0].text2;
+        img1.src = content.phishing[0].img1;
+        img2.src = content.phishing[0].img2;
+        title.innerHTML = 'Phishing';
       } else if (selected === '1') {
         console.log('selected section: ransom');
-        sect1.innerHTML = 'test';
-        sect2.innerHTML = 'test';
-        img1.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
-        img2.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
+        console.log(content.ransom[0].text1);
+        sect1.innerText = content.ransom[0].text1;
+        sect2.innerText = content.ransom[0].text2;
+        img1.src = content.ransom[0].img1;
+        img2.src = content.ransom[0].img2;
+        title.innerHTML = 'Ransom';
       } else if (selected === '2') {
         console.log('Selected section: Social');
-        sect1.innerHTML = 'test';
-        sect2.innerHTML = 'test';
-        img1.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
-        img2.src = 'https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg';
+        sect1.innerText = content.social[0].text1;
+        sect2.innerText = content.social[0].text2;
+        img1.src = content.social[0].img1;
+        img2.src = content.social[0].img2;
+        title.innerHTML = 'Social';
       } else if (selected === '3') {
         console.log('Selected section: Quiz');
         this.$state.setActiveComponent('quiz');
@@ -117,9 +125,8 @@ export default {
 <style lang="less">
 #module_interact {
   margin: auto;
-  padding-top: 5%;
   > #nav {
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -135,11 +142,12 @@ export default {
         outline: none;
         text-decoration: none;
         background-color: #3f436e;
-        margin-top: 20px;
         transition: 0.5s all;
     }
   }
   > #interaction {
+    position: relative;
+    top: 5%;
       margin: auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -152,15 +160,14 @@ export default {
       width: 80%;
       height: 50%;
       border-color: black;
-      border-style: solid;
       border-width: 3px;
       text-align: center;
       align-items: center;
+      overflow-y: hidden;
       > .title {
       grid-row: 1;
       text-align: left;
       border-color: black;
-      border-style: solid;
       border-width: 3px;
       }
       > .detail {
@@ -170,8 +177,8 @@ export default {
         align-self: center;
         justify-self: center;
         border-color: black;
-      border-style: solid;
       border-width: 3px;
+        font-size: 25px;
       }
       > .detail_r {
         grid-row: 3;
@@ -180,8 +187,8 @@ export default {
         align-self: center;
         justify-self: center;
         border-color: black;
-      border-style: solid;
       border-width: 3px;
+        font-size: 25px;
       }
       > .image_1 {
         height: 80%;
@@ -192,7 +199,6 @@ export default {
         justify-self: center;
         float: right;
               border-color: black;
-      border-style: solid;
       border-width: 3px;
       }
       > .image_2 {
@@ -204,7 +210,6 @@ export default {
         justify-self: center;
         float: right;
               border-color: black;
-      border-style: solid;
       border-width: 3px;
       }
   }

@@ -1,7 +1,9 @@
 <template>
-  <Wave />
-  <component :is="$state.getActiveComponent()"/>
-  <Sidebar v-if="$state.showSidebar" />
+  <div class="component-2-–-1">
+    <Wave class="component-2-–-1__4d7db5f776d746ccbb0db4a75ebbd492"/>
+    <component class="component-2-–-1__c5d07" :is="$state.getActiveComponent()"/>
+    <Sidebar v-if="$state.showSidebar" class="component-2-–-1__06d8aa9eaa7d4b61900a14288447c89e"/>
+  </div>
 </template>
 
 <script>
@@ -18,12 +20,4 @@ export default {
 </script>
 
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

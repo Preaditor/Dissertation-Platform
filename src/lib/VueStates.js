@@ -9,6 +9,7 @@ import Module from '@/components/Module.vue';
 import Report from '@/components/Report.vue';
 import Feedback from '@/components/Feedback.vue';
 import Progress from '@/components/Progress.vue';
+import Quiz from '@/components/Quiz.vue';
 
 export default class VueStates {
   constructor() {
@@ -22,6 +23,7 @@ export default class VueStates {
       report: markRaw(Report),
       feedback: markRaw(Feedback),
       progress: markRaw(Progress),
+      quiz: markRaw(Quiz),
     };
     this.reactive = reactive(Object.create(null));
     this.reactive.activeComponent = this.components.login;

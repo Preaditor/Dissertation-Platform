@@ -1,28 +1,26 @@
-[
- {
+{
     "phishing": [
         {
-            "text1": "",
-            "text2": "",
-            "url1": "",
-            "url2": ""
+          "text1": "",
+          "text2": "",
+          "img1": "",
+          "img2": ""
         }
-    ],
-    "ransom": [
+      ],
+      "ransom": [
         {
-            "text1": "",
-            "text2": "",
-            "url1": "",
-            "url2": ""
+          "text1": "Ransomware is when files are 'locked' using cryptography, this makes files inaccessible to the user unless certain conditions are met, this is typically in the form of a payment to the attacker. Payments will normally be in cryto currency as this is more difficult to trace in addition to not needing to convert for various currencies, once payment is complete a code is sent for the files to be decrypted. In 2020, an estimated $20 billion was paid out by victims of ransomware.",
+          "text2": "In order to prevent ransomware, there are few steps that can be taken, firstly never run applications that you are not certain of their origin, this will help prevent unknowingly installing ransomware. Secondly do not open office files that contain macros (macros are scripts that run within the file, typically this is to automate some functions) unless you can trust the source of the file i.e. a file created by a co-worker. Finally, keep your antivirus upto date to help prevent the ransomware from ever being able to run. Another best practice is to keep regular backups so that in the event of a ransomware attack, files can be restored.",
+          "img1": "https://upload.wikimedia.org/wikipedia/en/1/18/Wana_Decrypt0r_screenshot.png",
+          "img2": "https://static.safetydetectives.com/wp-content/uploads/2020/06/10-Best-Antivirus-in-2020-Windows-Android-iOS-Mac.jpg"
         }
-    ],
-    "social": [
+      ],
+      "social": [
         {
-            "text1": "",
-            "text2": "",
-            "url1": "",
-            "url2": ""
+          "text1": "",
+          "text2": "",
+          "img1": "",
+          "img2": ""
         }
-    ]
- }
-]
+      ]
+}
