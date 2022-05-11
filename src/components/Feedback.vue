@@ -93,7 +93,7 @@ export default {
   },
   methods: {
     submit() {
-      return fetch('//cyber.happy-bucket.co.uk:3000/api/feedback', {
+      return fetch(':3000/api/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

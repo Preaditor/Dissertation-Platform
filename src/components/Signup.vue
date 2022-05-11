@@ -117,7 +117,7 @@ export default {
         console.log('passwords dont match');
       } else {
         console.log('password match');
-        return fetch('//cyber.happy-bucket.co.uk:3000/api/sign_up', {
+        return fetch(':3000/api/sign_up', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

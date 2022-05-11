@@ -52,7 +52,7 @@ export default {
   methods: {
     Report() {
       console.log(this.issue_name, this.issue_desc, this.issue_page);
-      return fetch('//cyber.happy-bucket.co.uk:3000/api/report', {
+      return fetch(':3000/api/report', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
