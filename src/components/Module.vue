@@ -8,7 +8,7 @@
           @click="intro($event)">{{ module.title }}</button>
     </div>
     <div id="interaction">
-      <h1 class="title" id="title"> Phishing</h1>
+      <h1 class="title" id="title"></h1>
       <p class="detail" id="sect1">
       </p>
       <img class="image_1" id="img1" src=""/>
@@ -25,6 +25,18 @@ const content = require('../lib/content.json');
 console.log(content);
 export default {
   name: 'Module',
+  mounted() {
+    const sect1 = document.getElementById('sect1');
+    const sect2 = document.getElementById('sect2');
+    const img1 = document.getElementById('img1');
+    const img2 = document.getElementById('img2');
+    const title = document.getElementById('title');
+    sect1.innerText = content.phishing[0].text1;
+    sect2.innerText = content.phishing[0].text2;
+    img1.src = content.phishing[0].img1;
+    img2.src = content.phishing[0].img2;
+    title.innerHTML = 'Phishing';
+  },
   data() {
     return {
       nav: [
@@ -126,7 +138,7 @@ export default {
 #module_interact {
   margin: auto;
   > #nav {
-    position: fixed;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -1,26 +1,26 @@
 {
     "phishing": [
         {
-          "text1": "",
-          "text2": "",
-          "img1": "",
-          "img2": ""
+          "text1": "Phishing is when an attacker uses a website, email, or other online service to trick you into giving them your personal information.",
+          "text2": "To prevent this, you can use a variety of security tools to block phishing attacks. For example, you can set up a firewall to block all incoming traffic, or you can set up a browser to block phishing websites.",
+          "img1": "https://blog.malwarebytes.com/wp-content/uploads/2018/09/shutterstock_749866270-900x506.jpg",
+          "img2": "https://www.imperva.com/learn/wp-content/uploads/sites/13/2019/01/phishing-attack-email-example.png"
         }
-      ],
-      "ransom": [
+    ],
+    "ransom": [
         {
           "text1": "Ransomware is when files are 'locked' using cryptography, this makes files inaccessible to the user unless certain conditions are met, this is typically in the form of a payment to the attacker. Payments will normally be in cryto currency as this is more difficult to trace in addition to not needing to convert for various currencies, once payment is complete a code is sent for the files to be decrypted. In 2020, an estimated $20 billion was paid out by victims of ransomware.",
           "text2": "In order to prevent ransomware, there are few steps that can be taken, firstly never run applications that you are not certain of their origin, this will help prevent unknowingly installing ransomware. Secondly do not open office files that contain macros (macros are scripts that run within the file, typically this is to automate some functions) unless you can trust the source of the file i.e. a file created by a co-worker. Finally, keep your antivirus upto date to help prevent the ransomware from ever being able to run. Another best practice is to keep regular backups so that in the event of a ransomware attack, files can be restored.",
           "img1": "https://upload.wikimedia.org/wikipedia/en/1/18/Wana_Decrypt0r_screenshot.png",
           "img2": "https://static.safetydetectives.com/wp-content/uploads/2020/06/10-Best-Antivirus-in-2020-Windows-Android-iOS-Mac.jpg"
         }
-      ],
-      "social": [
+    ],
+    "social": [
         {
-          "text1": "",
-          "text2": "",
-          "img1": "",
-          "img2": ""
+          "text1": "Social engineering is a type of malicious exploitation, where a person is used to lure another person into a situation or to persuade them to do something.",
+          "text2": "To prevent this, training can be provided to the victim to avoid this type of attack. For example, a victim can be taught to not to open emails from unknown sources, or they can be taught to not to open websites from unknown sources. Another best practice is to train the victim to not open files that are not from the source they are expecting.",
+          "img1": "https://www.onespan.com/sites/default/files/styles/amp_blog_featured_image/public/blog/images/feature-image/Social-Engineering-infographic.jpg",
+          "img2": "https://now.symassets.com/content/dam/norton/global/images/non-product/misc/tlc/in-post-02-social-engineering-tactics-to-watch-for.png"
         }
-      ]
+    ]
 }

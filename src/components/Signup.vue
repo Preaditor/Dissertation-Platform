@@ -8,6 +8,7 @@
           type="text"
           v-model="email"
           placeholder="Username"
+          readonly="true"
         />
         <input
           id="input-p"
@@ -61,30 +62,43 @@
 </template>
 
 <script>
+const crypto = require('crypto');
+
 export default {
   name: 'signup',
+  mounted() {
+    const genRandomString = function (length) {
+      return crypto.randomBytes(Math.ceil(length / 2))
+        .toString('hex') /** convert to hexadecimal format */
+        .slice(0, length); /** return required number of characters */
+    };
+    let username = '';
+    username = genRandomString(10);
+    document.getElementById('input-u').value = username;
+    this.email = username;
+  },
   data() {
     return {
       email: '',
-      email_valid: true,
-      email_pattern: new RegExp(/^\S+@\S+(\.\S+)+$/),
+      //  email_valid: true,
+      //  email_pattern: new RegExp(/^\S+@\S+(\.\S+)+$/),
       pass1: '',
       pass2: '',
       // fname: '',
       // lname: '',
     };
   },
-  computed: {
-    email_check() {
-      if (!this.email) {
-        return '';
-      }
+  // computed: {
+  //   email_check() {
+  //     if (!this.email) {
+  //       return '';
+  //     }
 
-      return this.email_pattern.test(this.email)
-        ? console.log('input--valid')
-        : console.log('input--invalid');
-    },
-  },
+  //     return this.email_pattern.test(this.email)
+  //       ? console.log('input--valid')
+  //       : console.log('input--invalid');
+  //   },
+  //  },
   methods: {
     Login() {
       console.log('works');

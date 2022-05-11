@@ -24,6 +24,10 @@
             <img class="icon" src="@/res/fontawesome/svgs/solid/clipboard-list.svg">
             <p id="naming">Report</p>
         </div>
+        <div class="side_button" id="feedback" @click="feedback">
+          <img class="icon" src="@/res/fontawesome/svgs/solid/clipboard-list.svg">
+            <p id="naming">Feedback</p>
+        </div>
         <button id="expand" @click="openstate=!openstate">
             <img class="expand_button" src="@/res/fontawesome/svgs/solid/align-left.svg">
         </button>
@@ -61,6 +65,10 @@ export default {
     report() {
       console.log('report');
       this.$state.setActiveComponent('report');
+    },
+    feedback() {
+      console.log('feedback');
+      this.$state.setActiveComponent('feedback');
     },
   },
 };
